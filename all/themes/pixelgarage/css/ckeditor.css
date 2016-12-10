@@ -1,0 +1,74 @@
+/*
+ *  CKEditor styles
+ * --------------------------------------------------*/
+.pxl-normal {
+  font-family: 'FiraSansRegular', sans-serif;
+  font-size: 18px;
+  letter-spacing: normal;
+  line-height: 1.15em;
+  text-align: left;
+  color: #000;
+}
+@media screen and (min-width: 37.56521739130435em) {
+  .pxl-normal {
+    font-size: 2.99479167vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .pxl-normal {
+    font-size: 23px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .pxl-normal {
+    font-size: 23px;
+  }
+}
+.pxl-title {
+  margin: 20px auto 20px;
+  font-family: 'AlegreyaSansBlack';
+  font-size: 28px;
+  letter-spacing: 0.02em;
+  line-height: 1.4em;
+  text-align: left;
+  color: #000;
+}
+@media screen and (min-width: 33.6em) {
+  .pxl-title {
+    font-size: 5.20833333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .pxl-title {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .pxl-title {
+    font-size: 40px;
+  }
+}
+.pxl-subtitle {
+  font-family: 'AlegreyaSansExtraBold';
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  line-height: 1.3em;
+  color: #000;
+}
+@media screen and (min-width: 38.4em) {
+  .pxl-subtitle {
+    font-size: 3.90625vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .pxl-subtitle {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .pxl-subtitle {
+    font-size: 30px;
+  }
+}

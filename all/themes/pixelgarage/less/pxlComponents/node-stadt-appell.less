@@ -1,0 +1,146 @@
+/*
+ *  Node page component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@teaser-title-height: 54px;
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.node.node-stadt-appell.view-mode-teaser {
+  margin: 0;
+
+  >.row {
+    margin: 0;
+
+    >div.col-sm-12 {
+      position: relative;
+      padding: 0;
+      width: 100%;
+
+      >.appell-call-backdrop {
+        display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: @pxl-color-backdrop;
+        z-index: 100;
+
+        .appell-text {
+          width: 100%;
+          #pxl-mixins.center-vertically();
+          font-family: @pxl-text-font;
+          #pxl-mixins.font-size-responsive(23px, 23px, 18px);
+          letter-spacing: normal;
+          text-align: center;
+          line-height: 1;
+          color: #fff;
+        }
+      }
+
+      >.field-name-title {
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 12px 15px;
+        height: @teaser-title-height;
+        background-color: @pxl-color-black;
+
+        h2 {
+          margin: 0;
+          padding: 0;
+          font-family: @pxl-subtitle-font;
+          font-weight: 500;
+          #pxl-mixins.font-size-responsive(30px, 30px, 30px);
+          letter-spacing: 0.02em;
+          text-align: left;
+          .text-overflow();
+          line-height: 1;
+          color: #fff;
+        }
+      }
+
+      >.field-name-field-image {
+        position: absolute;
+        top: 10px;
+        right: -15px;
+        z-index: 200;
+
+        .field-item {
+          img {
+            width: auto;
+            height: 80px;
+          }
+        }
+      }
+
+      >.field-name-field-short-appell {
+        margin: 0;
+        padding: 40px 20px 20px;
+        height: (@pe-item-height - @teaser-title-height);
+        background-color: #fff;
+
+        .field-item {
+          font-family: @pxl-text-font;
+          #pxl-mixins.font-size-responsive(23px, 23px, 18px);
+          letter-spacing: normal;
+          text-align: left;
+          line-height: 1;
+          color: @text-color;
+        }
+      }
+
+      &:hover {
+        >.appell-call-backdrop {
+          display: block;
+        }
+      }
+
+    }
+  }
+}
+
+.node.node-stadt-appell.view-mode-full,
+.node.node-stadt-appell.view-mode-default {
+  margin: 0;
+
+  >.row {
+    >div.col-sm-12 {
+      position: relative;
+      width: 100%;
+
+      >.field-name-title {
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 12px 15px;
+        height: @teaser-title-height;
+        background-color: @pxl-color-black;
+
+        h2 {
+          margin: 0;
+          padding: 0;
+          font-family: @pxl-subtitle-font;
+          font-weight: 500;
+          #pxl-mixins.font-size-responsive(30px, 30px, 30px);
+          letter-spacing: 0.02em;
+          text-align: left;
+          .text-overflow();
+          line-height: 1;
+          color: #fff;
+        }
+      }
+
+      >.field-name-body {
+        margin: 0 0 20px;
+        #pxl-mixins.wysiwyg-body();
+      }
+    }
+  }
+}

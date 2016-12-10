@@ -1,0 +1,74 @@
+/*
+ *  Node page component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@paragraph-max-width: 1000px;
+@paragraph-margin-bottom: 20px;
+
+
+// Mixins
+// -------------------------
+.paragraph-title () {
+  font-family: @pxl-title-font;
+  #pxl-mixins.font-size-responsive(40px, 40px, 28px);
+  letter-spacing: 0.02em;
+  line-height: 2.5;
+  color: @text-color;
+}
+
+.paragraph-subtitle () {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-family: @pxl-subtitle-font;
+  #pxl-mixins.font-size-responsive(30px, 30px, 24px);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  color: @text-color;
+}
+
+.paragraph-item-title () {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-family: @pxl-text-font-bold;
+  #pxl-mixins.font-size-responsive(23px, 23px, 18px);
+  letter-spacing: 0.02em;
+  text-transform: none;
+  line-height: 1.2;
+  color: @text-color;
+}
+
+
+
+// General settings
+// -------------------------
+.node.node-page.view-mode-full {
+  margin: 30px 0;
+
+  >.row {
+    >div.col-sm-12 {
+      width: 100%;
+
+      >.field-name-title {
+        h2 {
+          .paragraph-title();
+        }
+      }
+
+      >.field-name-body {
+        margin: 0 0 20px;
+        #pxl-mixins.wysiwyg-body();
+      }
+
+      >.paragraphs-items {
+        .field-name-field-paragraphs {
+            //margin: 0 auto;
+
+            // see paragraph-item-... less files
+        }
+      }
+
+    }
+  }
+}

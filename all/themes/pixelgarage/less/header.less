@@ -1,0 +1,112 @@
+/*
+ *  Header section (navigation)
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// Main settings
+// -------------------------
+body.navbar-is-fixed-top {
+  padding-top: 110px !important;
+
+  &.admin-menu {
+    padding-top: 110px !important;
+  }
+
+}
+
+
+header#navbar {
+  margin: 0 auto;
+  border: none;
+  background: transparent none;
+
+  .container, .container-fluid {
+    padding: 20px 0 0;
+
+    .navbar-header {
+      // header (branding)
+      width: 100%;
+      text-align: center;
+
+      a.logo {
+        display: none;
+        float: none;
+
+        img {
+          display: inline-block;
+          vertical-align: middle;
+          max-height: 80px;
+          width: auto;
+        }
+      }
+
+      a.navbar-brand {
+        display: inline-block;
+        vertical-align: middle;
+        float: none;
+        margin: 0 auto 15px;
+        padding: 5px 20px 0;
+        height: auto;
+        font-family: @pxl-title-font;
+        #pxl-mixins.font-size-responsive(80px, 60px, 30px);
+        letter-spacing: 0.04em;
+        color: #fff;
+        line-height: 1;
+        background-color: @pxl-color-black;
+      }
+
+      p.lead {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 auto;
+        padding: 0 @grid-gutter-width/2;
+        font-family: @pxl-title-font;
+        #pxl-mixins.font-size-responsive(50px, 35px, 26px);
+        letter-spacing: 0.02em;
+        color: @text-color;
+        line-height: 1;
+      }
+
+      .navbar-toggle {
+        // navbar toggle with burger
+        padding: 5px 10px;
+      }
+
+      @media @tablet {
+        a.navbar-brand {
+          margin: 0 auto 20px;
+          padding: 10px 70px 5px;
+        }
+      }
+      @media @normal {
+        a.navbar-brand {
+          margin: 0 auto 30px;
+          padding: 10px 100px 5px;
+        }
+      }
+
+    }
+
+    // collapse part
+    .region-navigation {
+      position: relative;
+
+      #block-locale-language {
+        position: absolute;
+        top: 0;
+        right: 10px;
+
+        // see block-language.less
+      }
+    }
+  }
+}
+

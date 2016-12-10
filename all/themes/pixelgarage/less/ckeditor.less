@@ -1,0 +1,72 @@
+/*
+ *  CKEditor styles
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@pxl-title-font: 'AlegreyaSansBlack';
+@pxl-subtitle-font: 'AlegreyaSansExtraBold';
+@pxl-text-font: 'FiraSansRegular', sans-serif;
+@pxl-text-font-bold: 'FiraSansBold', sans-serif;
+
+@text-color: #000;
+
+@tablet:  ~"screen and (min-width: 48em)";
+@normal:  ~"screen and (min-width: 64em)";
+
+// Mixins
+// -------------------------
+.font-size-responsive(@max-size; @med-size; @min-size) {
+  @min-max-breakpoint: unit((48 * @min-size / @med-size), em);
+  @font-break:  ~"screen and (min-width: @{min-max-breakpoint})";
+
+  // min font size
+  font-size: @min-size;
+
+  // dynamic font size
+  @media @font-break {
+    font-size: unit(@med-size/7.68, vw);
+  }
+
+  // maed.font size
+  @media @tablet {
+    font-size: @med-size;
+  }
+  // max.font size
+  @media @normal {
+    font-size: @max-size;
+  }
+}
+
+
+
+// Main settings
+// -------------------------
+.pxl-normal {
+  font-family: @pxl-text-font;
+  .font-size-responsive(23px, 23px, 18px);
+  letter-spacing: normal;
+  line-height: 1.15em;
+  text-align: left;
+  color: @text-color;
+}
+
+.pxl-title {
+  margin: 20px auto 20px;
+  font-family: @pxl-title-font;
+  .font-size-responsive(40px, 40px, 28px);
+  letter-spacing: 0.02em;
+  line-height: 1.4em;
+  text-align: left;
+  color: @text-color;
+}
+
+.pxl-subtitle {
+  font-family: @pxl-subtitle-font;
+  font-weight: 500;
+  .font-size-responsive(30px, 30px, 24px);
+  letter-spacing: 0.02em;
+  text-align: left;
+  line-height: 1.3em;
+  color: @text-color;
+}

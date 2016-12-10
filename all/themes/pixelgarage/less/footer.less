@@ -1,0 +1,94 @@
+/*
+ *  Footer section (main content)
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// Main settings
+// -------------------------
+footer.footer {
+  margin: 0 auto;
+  padding: 30px 0;
+  border: none;
+  background-color: @pxl-color-background;
+
+  .node.node-footer {
+    .row {
+      .col-xs-4 {
+        &.left, &.right {
+          cursor: pointer;
+        }
+
+        .icon-facebook {
+          margin: 0 auto 20px;
+          width: auto;
+          height: 32px;
+          background: url(../images/icon-facebook.svg) no-repeat top center / contain;
+        }
+
+        .field-name-field-facebook-link,
+        .field-name-field-webseite-link {
+          display: none;
+
+          @media @tablet {
+            display: block;
+          }
+
+          .field-item {
+            font-family: @pxl-text-font;
+            #pxl-mixins.font-size-responsive(23px, 20px, 14px);
+            letter-spacing: normal;
+            line-height: 1.3em;
+            text-align: center;
+
+            a {
+              display: block;
+              text-decoration: none;
+              outline: none;
+              color: @text-color;
+
+              &:hover, &:active {
+                color: @pxl-color-active;
+              }
+            }
+          }
+        }
+
+        .icon-website {
+          margin: 0 auto 20px;
+          width: auto;
+          height: 35px;
+          background: url(../images/icon-www.svg) no-repeat top center / contain;
+        }
+
+        .field-name-body {
+          .field-item {
+            #pxl-mixins.wysiwyg-body();
+
+            p {
+              #pxl-mixins.font-size-responsive(23px, 20px, 14px);
+              text-align: center;
+            }
+
+            img {
+              margin: 0 auto;
+            }
+
+            a {
+              margin: 30px auto 0;
+              #pxl-mixins.font-size-responsive(23px, 20px, 14px);
+              color: @text-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

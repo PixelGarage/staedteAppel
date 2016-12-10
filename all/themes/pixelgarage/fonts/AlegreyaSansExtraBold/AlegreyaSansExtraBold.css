@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'AlegreyaSansExtraBold';
+    src: url('fonts/AlegreyaSansExtraBold.eot');
+    src: url('fonts/AlegreyaSansExtraBold.eot') format('embedded-opentype'),
+         url('fonts/AlegreyaSansExtraBold.woff2') format('woff2'),
+         url('fonts/AlegreyaSansExtraBold.woff') format('woff'),
+         url('fonts/AlegreyaSansExtraBold.ttf') format('truetype'),
+         url('fonts/AlegreyaSansExtraBold.svg#AlegreyaSansExtraBold') format('svg');
+}

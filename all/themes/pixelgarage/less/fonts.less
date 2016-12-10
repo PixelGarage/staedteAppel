@@ -1,0 +1,98 @@
+/* --------------------------------------------------
+ * Pixelgarage fonts
+ * --------------------------------------------------*/
+//
+// webfont licences
+//@import '../fonts/BrandonGrotesque/BrandonGrotesque-Licence.css';
+
+//
+// Google fonts
+//@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,700');
+
+//
+// Awesome icon font
+@import '../fonts/font-awesome/less/font-awesome';
+@fa-font-path: '@{pxl-font-path}/font-awesome/fonts'; // override fa font path (lazy loading)
+
+//
+// Define customer specific fonts
+@pxl-font-path: '../fonts';
+
+// icon font
+@pxl-icon-font: 'fontawesome';
+
+// title font
+@pxl-title-font: 'AlegreyaSansBlack';
+@pxl-subtitle-font: 'AlegreyaSansExtraBold';
+
+// text fonts
+@pxl-text-font: 'FiraSansRegular', sans-serif;
+@pxl-text-font-light: @pxl-text-font;
+@pxl-text-font-medium: @pxl-text-font;
+@pxl-text-font-bold: 'FiraSansBold', sans-serif;
+@pxl-text-font-italic: @pxl-text-font;
+@pxl-text-font-light-italic: @pxl-text-font;
+@pxl-text-font-medium-italic: @pxl-text-font;
+@pxl-text-font-bold-italic: @pxl-text-font-bold;
+
+// form font
+@pxl-form-font: @pxl-text-font;
+
+// overrides
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// overrides
+@font-family-base: @pxl-text-font;
+
+//
+// font faces
+//
+@font-face {
+  font-family: 'AlegreyaSansBlack';
+  src: url('@{pxl-font-path}/AlegreyaSansBlack/AlegreyaSansBlack.eot');
+  src: url('@{pxl-font-path}/AlegreyaSansBlack/AlegreyaSansBlack.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/AlegreyaSansBlack/AlegreyaSansBlack.woff2') format('woff2'),
+  url('@{pxl-font-path}/AlegreyaSansBlack/AlegreyaSansBlack.woff') format('woff'),
+  url('@{pxl-font-path}/AlegreyaSansBlack/AlegreyaSansBlack.ttf') format('truetype'),
+  url('@{pxl-font-path}/AlegreyaSansBlack/AlegreyaSansBlack.svg#AlegreyaSansBlack') format('svg');
+}
+@font-face {
+  font-family: 'AlegreyaSansExtraBold';
+  src: url('@{pxl-font-path}/AlegreyaSansExtraBold/AlegreyaSansExtraBold.eot');
+  src: url('@{pxl-font-path}/AlegreyaSansExtraBold/AlegreyaSansExtraBold.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/AlegreyaSansExtraBold/AlegreyaSansExtraBold.woff2') format('woff2'),
+  url('@{pxl-font-path}/AlegreyaSansExtraBold/AlegreyaSansExtraBold.woff') format('woff'),
+  url('@{pxl-font-path}/AlegreyaSansExtraBold/AlegreyaSansExtraBold.ttf') format('truetype'),
+  url('@{pxl-font-path}/AlegreyaSansExtraBold/AlegreyaSansExtraBold.svg#AlegreyaSansExtraBold') format('svg');
+}
+@font-face {
+  font-family: 'AlegreyaSansBold';
+  src: url('@{pxl-font-path}/AlegreyaSansBold/AlegreyaSansBold.eot');
+  src: url('@{pxl-font-path}/AlegreyaSansBold/AlegreyaSansBold.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/AlegreyaSansBold/AlegreyaSansBold.woff2') format('woff2'),
+  url('@{pxl-font-path}/AlegreyaSansBold/AlegreyaSansBold.woff') format('woff'),
+  url('@{pxl-font-path}/AlegreyaSansBold/AlegreyaSansBold.ttf') format('truetype'),
+  url('@{pxl-font-path}/AlegreyaSansBold/AlegreyaSansBold.svg#AlegreyaSansBold') format('svg');
+}
+
+@font-face {
+  font-family: 'FiraSansRegular';
+  src: url('@{pxl-font-path}/FiraSansRegular/FiraSansRegular.eot');
+  src: url('@{pxl-font-path}/FiraSansRegular/FiraSansRegular.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/FiraSansRegular/FiraSansRegular.woff2') format('woff2'),
+  url('@{pxl-font-path}/FiraSansRegular/FiraSansRegular.woff') format('woff'),
+  url('@{pxl-font-path}/FiraSansRegular/FiraSansRegular.ttf') format('truetype'),
+  url('@{pxl-font-path}/FiraSansRegular/FiraSansRegular.svg#FiraSansRegular') format('svg');
+}
+@font-face {
+  font-family: 'FiraSansBold';
+  src: url('@{pxl-font-path}/FiraSansBold/FiraSansBold.eot');
+  src: url('@{pxl-font-path}/FiraSansBold/FiraSansBold.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/FiraSansBold/FiraSansBold.woff2') format('woff2'),
+  url('@{pxl-font-path}/FiraSansBold/FiraSansBold.woff') format('woff'),
+  url('@{pxl-font-path}/FiraSansBold/FiraSansBold.ttf') format('truetype'),
+  url('@{pxl-font-path}/FiraSansBold/FiraSansBold.svg#FiraSansBold') format('svg');
+}

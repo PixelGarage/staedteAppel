@@ -1,0 +1,173 @@
+/*
+ *  Content section (main content)
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@pxl-content-fading-height: 20px;
+
+
+// Mixins
+// -------------------------
+
+
+
+// Main settings
+// -------------------------
+.container, .container-fluid {
+  // all container with background
+  //background-color: #fff;
+
+  // sharper fonts
+  #pxl-mixins.sharp-fonts;
+
+  //
+  // SVG correction for IE
+  img[src*=".svg"] {
+    width: 100%;
+  }
+
+  a {
+    outline: none;
+
+    &.active, &:hover, &:focus {
+      outline: none;
+    }
+  }
+
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  min-height: 320px;
+  background-color: @pxl-color-body-bg;
+
+  //
+  // front page main top image and subtitle
+  .page-subtitle {
+    margin: 15px auto;
+    width: 100%;
+    max-width: 640px;
+    font-family: @pxl-text-font;
+    #pxl-mixins.font-size-responsive(26px, 23px, 18px);
+    text-align: center;
+
+    @media @narrow {
+      margin: 20px auto;
+      width: 70%;
+    }
+    @media @wide {
+      margin: 30px auto;
+      width: 55%;
+    }
+  }
+
+  .main-top-image {
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    padding: 0;
+    padding-bottom: 16.836%;
+    background: url(../images/skyline_schweizer_staedte.svg) no-repeat top center / cover;
+  }
+
+  .main-container {
+    margin: -1px auto 0;
+    background-color: @pxl-color-background;
+
+    .container, .container-fluid {
+      //
+      // Page header
+      #page-header {
+        .region-header {
+          // block title
+          h2.block-title {
+            margin: 20px 0 10px;
+            font-family: @pxl-text-font;
+            font-size: @font-size-larger;
+          }
+
+        }
+      }
+
+      //
+      // Frames of: Page title, Messages, Admin tabs, Action links and Main content
+      .row {
+        section { // column(s)
+
+          h1.page-header {
+            margin: 20px 0 10px;
+            font-family: @pxl-text-font-bold;
+            font-size: @font-size-h1;
+          }
+
+          .messages {
+            margin-top: 20px;
+          }
+
+          //
+          // Admin tabs and action links
+          ul.nav-tabs {
+            margin: 20px 0 5px;
+            li {
+              float: right;
+              a {
+                padding: 5px 10px;
+                font-family: @font-family-monospace;
+                font-size: @font-size-small;
+                border-radius: 0;
+              }
+            }
+          }
+          ul.action-links {
+            margin: 0;
+            li {
+              float: right;
+              a {
+                font-family: @font-family-monospace;
+                font-size: @font-size-small;
+              }
+            }
+          }
+        } // section
+
+        //
+        // main content region
+        .region-content {
+          #block-system-main {
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    //
+    // fading area on top and bottom of main container
+    .fading {
+      display: none; // will be enabled via event
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: @pxl-content-fading-height;
+      z-index: 10;
+
+      &.fading-top {
+        top: 0;
+        #gradient.vertical(#fff, rgba(255,255,255,0));
+      }
+      &.fading-bottom {
+        bottom: 0;
+        #gradient.vertical(rgba(255,255,255,0), #fff);
+      }
+    }
+  } // main-container
+
+  footer {
+  }
+
+}
