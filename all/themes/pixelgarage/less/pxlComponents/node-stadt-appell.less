@@ -36,7 +36,7 @@
 
         .appell-text {
           width: 100%;
-          #pxl-mixins.center-vertically();
+          #pxl-mixins.center-vertically(absolute);
           font-family: @pxl-text-font;
           #pxl-mixins.font-size-responsive(23px, 23px, 18px);
           letter-spacing: normal;
@@ -110,6 +110,15 @@
 .node.node-stadt-appell.view-mode-full,
 .node.node-stadt-appell.view-mode-default {
   margin: 0;
+  padding: 20px 15px;
+  background-color: #fff;
+
+  @media @narrow {
+    padding: 40px 50px;
+  }
+  @media @tablet {
+    padding: 60px 80px;
+  }
 
   >.row {
     >div.col-sm-12 {

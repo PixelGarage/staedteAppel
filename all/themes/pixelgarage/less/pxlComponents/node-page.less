@@ -43,8 +43,18 @@
 
 // General settings
 // -------------------------
-.node.node-page.view-mode-full {
-  margin: 30px 0;
+.node.node-page.view-mode-full,
+.node.node-page.view-mode-default {
+  margin: 0;
+  padding: 20px 15px;
+  background-color: #fff;
+
+  @media @narrow {
+    padding: 40px 50px;
+  }
+  @media @tablet {
+    padding: 60px 80px;
+  }
 
   >.row {
     >div.col-sm-12 {
