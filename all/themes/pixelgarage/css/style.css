@@ -9932,7 +9932,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   padding: 0;
   display: inline-block;
   margin: 0 -0.25em 0 0;
-  padding: 0 10px;
+  padding: 0 5px;
   line-height: 1;
 }
 #block-locale-language ul.language-switcher-locale-url > li.first {
