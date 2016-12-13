@@ -16,6 +16,14 @@
 .node.node-stadt-appell.view-mode-teaser {
   margin: 0;
 
+  a {
+    text-decoration: none;
+
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+    }
+  }
+
   >.row {
     margin: 0;
 
@@ -25,24 +33,50 @@
       width: 100%;
 
       >.appell-call-backdrop {
-        display: none;
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: @pxl-color-backdrop;
         z-index: 100;
+        background: none;
 
         .appell-text {
+          padding: 0 10px;
           width: 100%;
-          #pxl-mixins.center-vertically(absolute);
+          position: absolute;
+          top: auto;
+          bottom: 10px;
+          left: 0;
+          right: 0;
           font-family: @pxl-text-font;
-          #pxl-mixins.font-size-responsive(23px, 23px, 18px);
+          font-size: 18px;
           letter-spacing: normal;
-          text-align: center;
+          text-align: right;
           line-height: 1;
-          color: #fff;
+          color: @pxl-color-backdrop;
+        }
+      }
+
+      @media @normal {
+        >.appell-call-backdrop {
+          display: none;
+          background-color: @pxl-color-backdrop;
+
+          .appell-text {
+            width: 100%;
+            #pxl-mixins.center-vertically(absolute);
+            bottom: auto;
+            font-size: 23px;
+            text-align: center;
+            color: #fff;
+          }
+        }
+
+        &:hover {
+          >.appell-call-backdrop {
+            display: block;
+          }
         }
       }
 
@@ -83,7 +117,7 @@
 
       >.field-name-field-short-appell {
         margin: 0;
-        padding: 40px 20px 20px;
+        padding: 30px 20px 20px;
         height: (@pe-item-height - @teaser-title-height);
         background-color: #fff;
 
@@ -92,17 +126,10 @@
           #pxl-mixins.font-size-responsive(23px, 23px, 18px);
           letter-spacing: normal;
           text-align: left;
-          line-height: 1;
+          line-height: 1.3em;
           color: @text-color;
         }
       }
-
-      &:hover {
-        >.appell-call-backdrop {
-          display: block;
-        }
-      }
-
     }
   }
 }
@@ -152,12 +179,13 @@
       }
 
       >.shariff-buttons-title {
-        margin-top: 50px;
-        font-family: @pxl-text-font;
-        #pxl-mixins.font-size-responsive();
-        letter-spacing: normal;
+        margin: 50px auto;
+        font-family: @pxl-text-font-bold;
+        #pxl-mixins.font-size-responsive(20px, 20px, 18px);
+        letter-spacing: 0.05em;
         line-height: 1.3em;
         text-align: center;
+        text-transform: uppercase;
         color: @pxl-color-main;
       }
 

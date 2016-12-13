@@ -70,7 +70,7 @@ footer.footer {
 
         .field-name-body {
           .field-item {
-            #pxl-mixins.wysiwyg-body();
+            //#pxl-mixins.wysiwyg-body();
 
             p {
               #pxl-mixins.font-size-responsive(23px, 20px, 14px);
@@ -82,9 +82,23 @@ footer.footer {
             }
 
             a {
-              margin: 30px auto 0;
-              #pxl-mixins.font-size-responsive(23px, 20px, 14px);
+              display: block;
+              margin: 40px auto 0;
+              #pxl-mixins.font-size-responsive(18px, 18px, 14px);
               color: @text-color;
+
+              &:hover, &:focus {
+                color: @link-hover-color;
+                text-decoration: none;
+                background: none;
+              }
+
+              @media @tablet {
+                margin: 50px auto 0;
+              }
+              @media @normal {
+                margin: 100px auto 0;
+              }
             }
           }
         }
