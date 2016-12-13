@@ -14,8 +14,13 @@
 // -------------------------
 #block-locale-language {
   display:inline-block;
+  padding-right: @grid-gutter-width/2;
   font-family: @pxl-text-font;
   font-size: 20px;
+
+  @media @tablet {
+    padding-right: 0;
+  }
 
   ul.language-switcher-locale-url {
     #pxl-mixins.no-list-style;
@@ -23,16 +28,20 @@
     >li {
       #pxl-mixins.no-list-style;
       display:inline-block;
-      margin: 0 -0.25em 0 0;
+      margin: 0;
       padding: 0 5px;
       line-height: 1;
-      //border-right: 1px solid @text-color;
+
+      @media @narrow {
+        padding: 0 10px;
+      }
 
       &.first {
         margin-left: 0;
         padding-left: 0;
       }
       &.last {
+        padding-right: 0;
         border-right: none;
       }
 

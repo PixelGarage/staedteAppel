@@ -9918,8 +9918,14 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
  * --------------------------------------------------*/
 #block-locale-language {
   display: inline-block;
+  padding-right: 15px;
   font-family: 'FiraSansRegular', sans-serif;
   font-size: 20px;
+}
+@media screen and (min-width: 48em) {
+  #block-locale-language {
+    padding-right: 0;
+  }
 }
 #block-locale-language ul.language-switcher-locale-url {
   list-style: none;
@@ -9928,18 +9934,23 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 }
 #block-locale-language ul.language-switcher-locale-url > li {
   list-style: none;
-  margin: 0;
   padding: 0;
   display: inline-block;
-  margin: 0 -0.25em 0 0;
+  margin: 0;
   padding: 0 5px;
   line-height: 1;
+}
+@media screen and (min-width: 30em) {
+  #block-locale-language ul.language-switcher-locale-url > li {
+    padding: 0 10px;
+  }
 }
 #block-locale-language ul.language-switcher-locale-url > li.first {
   margin-left: 0;
   padding-left: 0;
 }
 #block-locale-language ul.language-switcher-locale-url > li.last {
+  padding-right: 0;
   border-right: none;
 }
 #block-locale-language ul.language-switcher-locale-url > li a.language-link {
@@ -13577,20 +13588,11 @@ form.webform-client-form div.form-actions a.done-link:hover {
 /*
  *  Header section (navigation)
  * --------------------------------------------------*/
-body.navbar-is-fixed-top {
-  padding-top: 110px !important;
-}
-body.navbar-is-fixed-top.admin-menu {
-  padding-top: 110px !important;
-}
 header#navbar {
   margin: 0 auto;
+  padding-top: 20px;
   border: none;
   background: transparent none;
-}
-header#navbar .container,
-header#navbar .container-fluid {
-  padding: 20px 0 0;
 }
 header#navbar .container .navbar-header,
 header#navbar .container-fluid .navbar-header {
@@ -13698,7 +13700,7 @@ header#navbar .container .region-navigation #block-locale-language,
 header#navbar .container-fluid .region-navigation #block-locale-language {
   position: absolute;
   top: 0;
-  right: 10px;
+  right: 0;
 }
 /*
  *  Content section (main content)
@@ -13793,6 +13795,10 @@ body .main-container .container-fluid #page-header .region-header h2.block-title
   margin: 20px 0 10px;
   font-family: 'FiraSansRegular', sans-serif;
   font-size: 27px;
+}
+body .main-container .container .row,
+body .main-container .container-fluid .row {
+  margin: 0;
 }
 body .main-container .container .row section h1.page-header,
 body .main-container .container-fluid .row section h1.page-header {
