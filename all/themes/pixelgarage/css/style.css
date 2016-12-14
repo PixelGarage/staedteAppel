@@ -10270,7 +10270,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   font-family: 'AlegreyaSansBlack';
   font-size: 28px;
   letter-spacing: 0.02em;
-  line-height: 1.4em;
+  line-height: 1;
   text-align: left;
   color: #000;
 }
@@ -10307,7 +10307,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   font-size: 24px;
   letter-spacing: 0.02em;
   text-align: left;
-  line-height: 1.3em;
+  line-height: 1;
   color: #000;
 }
 @media screen and (min-width: 38.4em) {
@@ -10628,7 +10628,6 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   overflow: hidden;
   white-space: nowrap;
   padding: 12px 15px;
-  height: 54px;
   background-color: #000;
 }
 .node.node-stadt-appell.view-mode-full > .row > div.col-sm-12 > .field-name-title h2,
@@ -10792,7 +10791,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   font-family: 'AlegreyaSansBlack';
   font-size: 28px;
   letter-spacing: 0.02em;
-  line-height: 1.4em;
+  line-height: 1;
   text-align: left;
   color: #000;
 }
@@ -10829,7 +10828,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   font-size: 24px;
   letter-spacing: 0.02em;
   text-align: left;
-  line-height: 1.3em;
+  line-height: 1;
   color: #000;
 }
 @media screen and (min-width: 38.4em) {
@@ -11178,7 +11177,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   font-family: 'AlegreyaSansBlack';
   font-size: 28px;
   letter-spacing: 0.02em;
-  line-height: 1.4em;
+  line-height: 1;
   text-align: left;
   color: #000;
 }
@@ -11215,7 +11214,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   font-size: 24px;
   letter-spacing: 0.02em;
   text-align: left;
-  line-height: 1.3em;
+  line-height: 1;
   color: #000;
 }
 @media screen and (min-width: 38.4em) {
@@ -11766,7 +11765,7 @@ form#user-login {
   font-family: 'AlegreyaSansBlack';
   font-size: 28px;
   letter-spacing: 0.02em;
-  line-height: 1.4em;
+  line-height: 1;
   text-align: left;
   color: #000;
 }
@@ -11811,7 +11810,7 @@ form#user-login {
   font-size: 24px;
   letter-spacing: 0.02em;
   text-align: left;
-  line-height: 1.3em;
+  line-height: 1;
   color: #000;
 }
 @media screen and (min-width: 38.4em) {
