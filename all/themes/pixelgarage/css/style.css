@@ -9922,11 +9922,6 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   font-family: 'FiraSansRegular', sans-serif;
   font-size: 20px;
 }
-@media screen and (min-width: 48em) {
-  #block-locale-language {
-    padding-right: 0;
-  }
-}
 #block-locale-language ul.language-switcher-locale-url {
   list-style: none;
   margin: 0;
@@ -10121,7 +10116,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   font-family: 'AlegreyaSansBlack';
   font-size: 28px;
   letter-spacing: 0.02em;
-  line-height: 2.5;
+  line-height: 1;
   color: #000;
 }
 @media screen and (min-width: 33.6em) {
@@ -12328,7 +12323,7 @@ form#user-profile-form div .form-actions .form-submit .icon {
   width: 100%;
 }
 .view .view-content {
-  padding: 20px 0 50px;
+  padding: 20px 3% 50px;
 }
 .view .view-content > .pe-container {
   width: 100%;
@@ -13589,7 +13584,7 @@ form.webform-client-form div.form-actions a.done-link:hover {
  * --------------------------------------------------*/
 header#navbar {
   margin: 0 auto;
-  padding-top: 20px;
+  padding: 20px 0 0;
   border: none;
   background: transparent none;
 }
@@ -13795,51 +13790,55 @@ body .main-container .container-fluid #page-header .region-header h2.block-title
   font-family: 'FiraSansRegular', sans-serif;
   font-size: 27px;
 }
-body .main-container .container .row,
-body .main-container .container-fluid .row {
+body .main-container .container > .row,
+body .main-container .container-fluid > .row {
   margin: 0;
 }
-body .main-container .container .row section h1.page-header,
-body .main-container .container-fluid .row section h1.page-header {
+body .main-container .container > .row > section,
+body .main-container .container-fluid > .row > section {
+  padding: 0;
+}
+body .main-container .container > .row > section h1.page-header,
+body .main-container .container-fluid > .row > section h1.page-header {
   display: none;
   margin: 20px 0 10px;
   font-family: 'FiraSansBold', sans-serif;
   font-size: 46px;
 }
-body .main-container .container .row section .messages,
-body .main-container .container-fluid .row section .messages {
+body .main-container .container > .row > section .messages,
+body .main-container .container-fluid > .row > section .messages {
   margin-top: 20px;
 }
-body .main-container .container .row section ul.nav-tabs,
-body .main-container .container-fluid .row section ul.nav-tabs {
+body .main-container .container > .row > section ul.nav-tabs,
+body .main-container .container-fluid > .row > section ul.nav-tabs {
   margin: 20px 0 5px;
 }
-body .main-container .container .row section ul.nav-tabs li,
-body .main-container .container-fluid .row section ul.nav-tabs li {
+body .main-container .container > .row > section ul.nav-tabs li,
+body .main-container .container-fluid > .row > section ul.nav-tabs li {
   float: right;
 }
-body .main-container .container .row section ul.nav-tabs li a,
-body .main-container .container-fluid .row section ul.nav-tabs li a {
+body .main-container .container > .row > section ul.nav-tabs li a,
+body .main-container .container-fluid > .row > section ul.nav-tabs li a {
   padding: 5px 10px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 16px;
   border-radius: 0;
 }
-body .main-container .container .row section ul.action-links,
-body .main-container .container-fluid .row section ul.action-links {
+body .main-container .container > .row > section ul.action-links,
+body .main-container .container-fluid > .row > section ul.action-links {
   margin: 0;
 }
-body .main-container .container .row section ul.action-links li,
-body .main-container .container-fluid .row section ul.action-links li {
+body .main-container .container > .row > section ul.action-links li,
+body .main-container .container-fluid > .row > section ul.action-links li {
   float: right;
 }
-body .main-container .container .row section ul.action-links li a,
-body .main-container .container-fluid .row section ul.action-links li a {
+body .main-container .container > .row > section ul.action-links li a,
+body .main-container .container-fluid > .row > section ul.action-links li a {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 16px;
 }
-body .main-container .container .row .region-content #block-system-main,
-body .main-container .container-fluid .row .region-content #block-system-main {
+body .main-container .container > .row .region-content #block-system-main,
+body .main-container .container-fluid > .row .region-content #block-system-main {
   padding: 0;
 }
 body .main-container .fading {

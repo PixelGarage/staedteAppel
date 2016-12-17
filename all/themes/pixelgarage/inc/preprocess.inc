@@ -28,17 +28,17 @@ function pixelgarage_preprocess_page(&$vars) {
 
 
 function pixelgarage_preprocess_views_view_proximity(&$vars) {
-  global $language;
+  global $language, $base_url;
 
   $vars['donate_title'] = t('Donate');
   $vars['donate_text'] = t('Unterstütze unsere Kampagne!');
   switch ($language->language) {
     case 'de':
     default:
-      $vars['donate_url'] = 'node/21';
+      $vars['donate_url'] = $base_url . '/node/21';
       break;
     case 'fr':
-      $vars['donate_url'] = 'node/22';
+      $vars['donate_url'] = $base_url . '/node/22';
       break;
   }
 }
