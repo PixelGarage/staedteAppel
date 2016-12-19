@@ -24,12 +24,21 @@
 
   <?php endforeach; ?>
 
-  <div class="pe-item pe-item-donate">
+  <div class="pe-item pe-item-special">
     <div class="pe-item-inner">
-      <div class="donate-text"><?php print $donate_text; ?></div>
-      <a class="donate-button" role="button" href="<?php print $donate_url; ?>"><?php print $donate_title; ?></a>
+      <div class="item-text"><?php print $donate_text; ?></div>
+      <a class="item-button" role="button" href="<?php print $donate_url; ?>"><?php print $donate_title; ?></a>
     </div>
   </div>
+
+  <?php if (isset($appeal_text) && isset($appeal_url)): ?>
+    <div class="pe-item pe-item-special">
+      <div class="pe-item-inner">
+        <div class="item-text"><?php print $appeal_text; ?></div>
+        <a class="item-button" role="button" href="<?php print $appeal_url; ?>"><?php print $appeal_title; ?></a>
+      </div>
+    </div>
+  <?php endif; ?>
 
   <?php if ($use_modal_dlg): ?>
   <!--

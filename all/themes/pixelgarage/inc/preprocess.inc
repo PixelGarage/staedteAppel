@@ -30,6 +30,8 @@ function pixelgarage_preprocess_page(&$vars) {
 function pixelgarage_preprocess_views_view_proximity(&$vars) {
   global $language, $base_url;
 
+  //
+  // create donate item
   $vars['donate_title'] = t('Donate');
   $vars['donate_text'] = t('Unterstütze unsere Kampagne!');
   switch ($language->language) {
@@ -40,5 +42,23 @@ function pixelgarage_preprocess_views_view_proximity(&$vars) {
     case 'fr':
       $vars['donate_url'] = $base_url . '/node/22';
       break;
+  }
+
+  //
+  // create appeal download item
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'dein_appell')
+    ->propertyCondition('language', $language->language)
+    ->range(0, 1);
+  $result = $query->execute();
+
+  if (isset($result['node'])) {
+    // get audio file path and icon
+    $node = node_load(key($result['node']));
+    $doc_url = !empty($node->field_dokument) ? $node->field_dokument[LANGUAGE_NONE][0]['uri'] : '';
+    $vars['appeal_url'] = !empty($doc_url) ? file_create_url($doc_url) : null;
+    $vars['appeal_text'] = !empty($node->field_appell_text) ? $node->field_appell_text[LANGUAGE_NONE][0]['value'] : '';
+    $vars['appeal_title'] = !empty($node->title) ? $node->title : '';
   }
 }

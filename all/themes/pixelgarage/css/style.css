@@ -12367,7 +12367,7 @@ form#user-profile-form div .form-actions .form-submit .icon {
 .view .view-content > .pe-container .pe-item.shown {
   opacity: 1.0;
 }
-.view .view-content > .pe-container .pe-item.pe-item-donate {
+.view .view-content > .pe-container .pe-item.pe-item-special {
   padding: 30px 20px;
   height: 174px;
   font-family: 'FiraSansRegular', sans-serif;
@@ -12378,35 +12378,34 @@ form#user-profile-form div .form-actions .form-submit .icon {
   background-color: #fff;
 }
 @media screen and (min-width: 37.56521739130435em) {
-  .view .view-content > .pe-container .pe-item.pe-item-donate {
+  .view .view-content > .pe-container .pe-item.pe-item-special {
     font-size: 2.99479167vw;
   }
 }
 @media screen and (min-width: 48em) {
-  .view .view-content > .pe-container .pe-item.pe-item-donate {
+  .view .view-content > .pe-container .pe-item.pe-item-special {
     font-size: 23px;
   }
 }
 @media screen and (min-width: 64em) {
-  .view .view-content > .pe-container .pe-item.pe-item-donate {
+  .view .view-content > .pe-container .pe-item.pe-item-special {
     font-size: 23px;
   }
 }
-.view .view-content > .pe-container .pe-item.pe-item-donate .donate-text {
+.view .view-content > .pe-container .pe-item.pe-item-special .item-text {
   margin-bottom: 20px;
   color: #000;
 }
-.view .view-content > .pe-container .pe-item.pe-item-donate .donate-button {
-  display: block;
+.view .view-content > .pe-container .pe-item.pe-item-special .item-button {
+  display: inline-block;
   margin: 0 auto;
-  padding: 5px 0;
-  width: 50%;
+  padding: 5px 10px;
   color: #fff;
   border: 2px solid #f15a24;
   background-color: #f15a24;
 }
-.view .view-content > .pe-container .pe-item.pe-item-donate .donate-button.active,
-.view .view-content > .pe-container .pe-item.pe-item-donate .donate-button:hover {
+.view .view-content > .pe-container .pe-item.pe-item-special .item-button.active,
+.view .view-content > .pe-container .pe-item.pe-item-special .item-button:hover {
   text-decoration: none;
   color: #f15a24;
   background-color: #fff;
