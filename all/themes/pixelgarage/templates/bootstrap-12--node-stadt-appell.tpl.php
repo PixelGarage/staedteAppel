@@ -5,7 +5,7 @@
  */
 
 $appell_call = t('Appell lesen...');
-$appell_short = t('Die Steuerreform schadet den Städten');
+$appell_short = t("Die USR III schadet {$title}");
 $shariff_buttons_title = t('Appell jetzt teilen!');
 ?>
 

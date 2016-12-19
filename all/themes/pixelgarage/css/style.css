@@ -13644,27 +13644,27 @@ header#navbar .container-fluid .navbar-header p.lead {
   margin: 0 auto;
   padding: 0 15px;
   font-family: 'AlegreyaSansBlack';
-  font-size: 26px;
+  font-size: 24px;
   letter-spacing: 0.02em;
   color: #000;
   line-height: 1;
 }
-@media screen and (min-width: 35.65714285714286em) {
+@media screen and (min-width: 36em) {
   header#navbar .container .navbar-header p.lead,
   header#navbar .container-fluid .navbar-header p.lead {
-    font-size: 4.55729167vw;
+    font-size: 4.16666667vw;
   }
 }
 @media screen and (min-width: 48em) {
   header#navbar .container .navbar-header p.lead,
   header#navbar .container-fluid .navbar-header p.lead {
-    font-size: 35px;
+    font-size: 32px;
   }
 }
 @media screen and (min-width: 64em) {
   header#navbar .container .navbar-header p.lead,
   header#navbar .container-fluid .navbar-header p.lead {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 header#navbar .container .navbar-header .navbar-toggle,
