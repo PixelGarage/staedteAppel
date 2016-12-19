@@ -10572,9 +10572,6 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   height: 120px;
   background-color: #fff;
 }
-.i18n-fr .node.node-stadt-appell.view-mode-teaser > .row > div.col-sm-12 > .field-name-field-short-appell {
-  padding: 20px;
-}
 .node.node-stadt-appell.view-mode-teaser > .row > div.col-sm-12 > .field-name-field-short-appell .field-item {
   font-family: 'FiraSansRegular', sans-serif;
   font-size: 18px;
