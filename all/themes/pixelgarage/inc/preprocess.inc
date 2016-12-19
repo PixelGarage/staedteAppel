@@ -37,10 +37,10 @@ function pixelgarage_preprocess_views_view_proximity(&$vars) {
   switch ($language->language) {
     case 'de':
     default:
-      $vars['donate_url'] = $base_url . '/node/21';
+      $vars['donate_url'] = $base_url . '/de/node/21';
       break;
     case 'fr':
-      $vars['donate_url'] = $base_url . '/node/22';
+      $vars['donate_url'] = $base_url . '/fr/node/22';
       break;
   }
 
