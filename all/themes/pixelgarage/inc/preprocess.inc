@@ -49,16 +49,17 @@ function pixelgarage_preprocess_views_view_proximity(&$vars) {
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'node')
     ->entityCondition('bundle', 'dein_appell')
-    ->propertyCondition('language', $language->language)
-    ->range(0, 1);
+    ->propertyCondition('language', $language->language);
   $result = $query->execute();
 
-  if (isset($result['node'])) {
-    // get audio file path and icon
-    $node = node_load(key($result['node']));
+  foreach ($result['node'] as $nid => $obj) {
+    // create special pe-items
+    $node = node_load($nid);
     $doc_url = !empty($node->field_dokument) ? $node->field_dokument[LANGUAGE_NONE][0]['uri'] : '';
-    $vars['appeal_url'] = !empty($doc_url) ? file_create_url($doc_url) : null;
-    $vars['appeal_text'] = !empty($node->field_appell_text) ? $node->field_appell_text[LANGUAGE_NONE][0]['value'] : '';
-    $vars['appeal_title'] = !empty($node->title) ? $node->title : '';
+    $doc_mime = !empty($node->field_dokument) ? $node->field_dokument[LANGUAGE_NONE][0]['filemime'] : '';
+    $vars['special_items'][$nid]['appeal_url'] = !empty($doc_url) ? file_create_url($doc_url) : null;
+    $vars['special_items'][$nid]['link_target'] = ($doc_mime == 'application/pdf') ? '_blank' : '_self';
+    $vars['special_items'][$nid]['appeal_text'] = !empty($node->field_appell_text) ? $node->field_appell_text[LANGUAGE_NONE][0]['value'] : '';
+    $vars['special_items'][$nid]['appeal_title'] = !empty($node->title) ? $node->title : '';
   }
 }

@@ -31,14 +31,14 @@
     </div>
   </div>
 
-  <?php if (isset($appeal_text) && isset($appeal_url)): ?>
+  <?php foreach ($special_items as $id => $item): ?>
     <div class="pe-item pe-item-special">
       <div class="pe-item-inner">
-        <div class="item-text"><?php print $appeal_text; ?></div>
-        <a class="item-button" role="button" href="<?php print $appeal_url; ?>"><?php print $appeal_title; ?></a>
+        <div class="item-text"><?php print $item['appeal_text']; ?></div>
+        <a class="item-button" role="button" href="<?php print $item['appeal_url']; ?>" target="<?php print $item['link_target']; ?>"><?php print $item['appeal_title']; ?></a>
       </div>
     </div>
-  <?php endif; ?>
+  <?php endforeach; ?>
 
   <?php if ($use_modal_dlg): ?>
   <!--
